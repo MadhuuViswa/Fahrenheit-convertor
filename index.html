@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="style.css">
+    <title>Fahrenheit Conventor</title>
+   
+</head>
+<body>
+    <div id="Wrapper">
+        <h2>Celious to Fahrenheit</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="Enter a number">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()">Convert to Fahrenheit</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    
+    <script>
+        function convert(){
+           let CeliousValue = Number(document.getElementById("input").value)
+           let fVal = CeliousValue*33.8
+           let result =document.getElementById("result")
+           result.innerHTML = fVal.toFixed(3) + "F"
+        }  
+    </script>
+
+    
+</body>
+</html>
